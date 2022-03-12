@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+.wallpaper {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)), url(../img/background-form.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.glass {
+  backdrop-filter: blur(12px);
+}
+.panel {
+  margin: 20px;
+  padding: 20px;
+  width: 50vw;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: 1s ease-in-out;
+}
+.containerText{
+  min-block-size: 20%;
+  min-inline-size: 20%;
+  margin: 20px 0;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  font-family: poppins, sans-serif;
+}
+.textEfect::before{
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.textEfect:hover::before{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.textEfect::before{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #174eab;
+  border-radius: 4px;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+.textEfect{
+  position: relative;
+  font-size: 7.5vmin;
+  padding: 4px;
+  cursor: pointer;
+  color:#fff;
+  font-weight: 700;
+}
+.cadastro{
+  text-align: center;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  font-size: 5vmin;
+}
+h3{
+  text-align: center;
+  color: #f9f9f9;
+  text-transform: uppercase;
+}
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+input{
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+label, p{
+  font-size: 3vmin;
+}
+.typeText{
+  height: 50px;
+  width: 90%;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: flex;
+  align-items: center;
+  transition: .5s ease;
+}
+input:hover{
+  box-shadow: 0 0 1em #9a9b9b;
+  border-radius: 70px;
+  transition: .4s ease-in-out;
+}
+input:focus{
+  border: 2px solid white;
+  box-shadow: 0 0 1em #77787a;
+  outline: 0;
+  border-radius: 70px;
+}
+::-webkit-input-placeholder{
+  color: white;
+}
+.localDescription{
+  width: 90%;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 30px auto;
+}
+legend{
+  margin-left: 30px;
+}
+.local{
+  width: 90%;
+  margin: 10px 20px;
+}
+.containerLocal{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.cep{
+  height: 50px;
+  width: 45%;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.estados, .avaliacao{
+  height: 50px;
+  width: 45%;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin-right: 20px;
+}
+.time{
+  height: 50px;
+  width: 20%;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin-right: 20px;
+}
+.experience{
+  resize: none;
+  width: 90%;
+  height: 150px;
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+.switch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.switch .switch-text{
+  padding-right: 0.3rem;
+  font-size: 1.2rem;
+  color: #f9f9f9;
+}
+.switch .switch-wrapper{
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: relative;
+}
+.switch .switch-wrapper .switch-button{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #475569;
+}
+.switch .switch-wrapper input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch .switch-wrapper .switch-button::before{
+  content: "";
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  transition: .4s all ease;
+}
+.switch .switch-wrapper input:checked + .switch-button{
+  background-color: #58a721;
+}
+.switch .switch-wrapper input:checked + .switch-button::before{
+  transform:translateX(26px);
+}
+.required{
+  font-size: 13px;
+  text-align: left;
+  color: #e1e1e1;
+  margin: 20px 0 10px;
+}
+.button{
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center; 
+}
+.btn{
+  width: 60%;
+  padding: 0.5em 2em;
+  border: none;
+  font-weight: 700;
+  background-color: #174eab;
+  color: white;
+  border-radius: 70px;
+  font-size: 1.4rem;
+  transition: .4s ease;
+}
+.btn:hover{
+  box-shadow: 0 0 1em #bedfd8;
+  color: #fff;
+  border: 1px solid white;
+  background-color: transparent;
+  transform: scale(1.1);
+  cursor: pointer;
+
+}
+@media screen and (max-width: 900px){
+  .panel{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 750px){
+  .containerLocal{
+    flex-direction: column;
+  }
+  .cep{
+    width: 30%;
+  }
+  .estados, .avaliacao{
+    width: 70%;
+  }
+  .switch .switch-wrapper input:checked + .switch-button::before{
+    transform:translateX(24px);
+  }
+}
+@media screen and (max-width: 650px){
+  .panel{
+    width: 95%;
+  }
+  .switch .switch-wrapper input:checked + .switch-button::before{
+    transform:translateX(16px);
+  }
+  .btn{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 550px){
+  .switch .switch-text{
+    font-size: 0.9rem;
+  }
+  .switch .switch-wrapper input:checked + .switch-button::before{
+    transform:translateX(20px);
+  }
+}
+@media screen and (max-width: 500px){
+  .estados, .avaliacao, .pictures{
+    width: 80%;
+  }
+  .time{
+    width: 40%;
+  }
+  .pictures{
+    width: 95%;
+  }
+  .switch .switch-wrapper input:checked + .switch-button::before{
+    transform:translateX(8px);
+  }
+}

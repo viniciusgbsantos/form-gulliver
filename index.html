@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Gulliver's Travels</title>
+  <link rel="stylesheet" href="css/style.css" >
+  <link rel="icon" href="img/logo.png" sizes="32x32"> 
+
+
+</head>
+<body>
+  <section class="wallpaper">
+    <div class="panel glass">
+        <div class="containerText logo">
+            <h1 class="textEfect" >Gulliver's Travels</h1>
+        </div>
+        <h2 class="cadastro">Faça Seu Cadastro</h2>
+        <form class="form" action="">
+            <input class="typeText" type="text" method="post" placeholder="Nome Completo*" maxlength="60" minlength="5" required>
+            <input class="typeText" type="email" method="post" placeholder="Email*" maxlength="50" minlength="10" required>
+            <h3>Sobre o local</h3>
+            <input class="typeText local" type="text" method="post" placeholder="Nome do Local*" maxlength="60" required>
+            <fieldset class="localDescription">
+                <legend><b>Localização</b></legend>
+                <input class="typeText local" type="text" method="post" placeholder="Endereço*" maxlength="60" required>
+                <input class="typeText local" type="text" method="post" placeholder="Bairro*" maxlength="60" required>
+                <input class="typeText local" type="text" method="post" placeholder="Cidade*" maxlength="60" required>
+                <div class="containerLocal">
+                    <input list="uf" id="estados" class="estados" required placeholder="Selecione o estado*">
+                    <datalist id="uf">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </datalist>
+                    <label for="CEP*">CEP :
+                    <input class="cep" name="CEP" id="CEP" type="text" required minlength="8" maxlength="8"/>
+                    </label>
+                </div>
+            </fieldset>
+            <p>A entrada é franca?</p>
+            <div class="entradaOptions">
+                <input type="radio" id="sim" name="opcaoEntrada">
+                <label for="sim">Sim</label>
+                <input type="radio" id="nao" name="opcaoEntrada">
+                <label for="nao">Não</label>
+                <input type="radio" id="entradaOption" name="opcaoEntrada">
+                <label for="entradaOption">Outro</label>
+            </div>
+            <label for="entradaOption">Se tiver selecionado outro : </label>
+            <input class="typeText" type="text" method="post" id="entradaOption" placeholder="Ex: Determinados dias da semana a entrada é gratuita" maxlength="80">
+            <p>Caso não seja, quanto custa o ingresso?</p>
+            <input class="typeText" type="site" method="post" placeholder="Valor: R$" maxlength="60">
+            <label for="hora">Hora de abertura :</label>
+            <input class="time" type="time" id="hora"> 
+            <label for="fotos">Compartilhe fotos do lugar</label>
+            <input class="pictures" type="file" id="fotos">
+            <input class="typeText" type="site" method="post" placeholder="Site do local" maxlength="60">
+            <input list="classifica" id="classificacao" class="avaliacao" required
+            placeholder="Qual seria a sua avaliação?">
+            <datalist id="classifica">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                    <option value="6"></option>
+                    <option value="7"></option>
+                    <option value="8"></option>
+                    <option value="9"></option>
+                    <option value="10"></option>
+            </datalist>
+            <textarea class="experience" name="" id="" placeholder="Excreva como foi sua experiencia"></textarea>
+            
+            <div class="container">
+                <label for="term" class="switch">
+                <span class="switch-text">Declaro procedência nas minhas informações</span> 
+                <div class="switch-wrapper">
+                    <input id="term" type="checkbox" required>
+                    <span class="switch-button"></span> 
+                </div>
+            </div>
+            <span class="required"><b>*Campos obrigatórios</b></span>
+            <div class="button">
+                <button class="btn" type="submit">Enviar ></button>
+            </div>
+    </form>
+    </div>
+  </section>
+</body>
+</html>
